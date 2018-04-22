@@ -132,6 +132,15 @@ public class SBCheckOutTransaction {
 These are the attributes that you should use to compile the receipt for your application users. The *unique_pay_id* is a reference that the parking operator will be able to use to finda particular payment in the entervo parking system.
 The _duration_ string is provided in the format _DD-HH-MM_, so a value of "01-03-17" will stand for a parking duration of 1 day, 3 hours and 17 minutes.
 
+### _onConductPayment( String sessionToken)_
+
+This function is called when the user is supposed to make his mobile payment. As this version of the plugin does not make use of the S&amp;B provided Braintree PSP, it is your responsibility to handle the actual payment flow. Once this is complete, you have two options:
+
+* let entervo know about the successful payment by booking it via `bookPayment( sessionToken);` or
+* cancel the flow by firing `cancelPayment()`;
+
+In any case, the hosting app will be informed by a corresponding status change.
+
 ## Starting a Checkout Flow
 
 It is the responsibility of your mobile application to obtain an identification from the app user that stands for his current parking process. Currently, there are three different types of identification that the _entervoCheckoutPlugin_ plugin can handle (obviously, depending on the capabilities of the connected parking system):
