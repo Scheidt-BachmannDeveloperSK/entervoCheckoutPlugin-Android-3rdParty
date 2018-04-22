@@ -139,7 +139,20 @@ This function is called when the user is supposed to make his mobile payment. As
 * let entervo know about the successful payment by booking it via `bookPayment( sessionToken);` or
 * cancel the flow by firing `cancelPayment()`;
 
-In any case, the hosting app will be informed by a corresponding status change.
+In any case, the hosting app will be informed by a corresponding status change. You can look at a working example in the demo app:
+
+```java
+
+public void onConductPayment( String sessionToken) {
+
+    /*
+     * payment magic happens here...
+     * ...and once we're done, we call
+     */
+	bookPayment( sessionToken);
+}
+
+```
 
 ## Starting a Checkout Flow
 
