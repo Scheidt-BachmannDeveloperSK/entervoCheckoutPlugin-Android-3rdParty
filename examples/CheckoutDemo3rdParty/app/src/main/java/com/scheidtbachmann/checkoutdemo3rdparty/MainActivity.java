@@ -12,7 +12,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import com.scheidtbachmann.entervocheckoutplugin.core.SBCheckOut;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.AssetType;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.IdentificationType;
@@ -20,7 +19,6 @@ import com.scheidtbachmann.entervocheckoutplugin.delegation.LogLevel;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.SBCheckOutDelegate;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.SBCheckOutStatus;
 import com.scheidtbachmann.entervocheckoutplugin.dto.SBCheckOutTransaction;
-
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
