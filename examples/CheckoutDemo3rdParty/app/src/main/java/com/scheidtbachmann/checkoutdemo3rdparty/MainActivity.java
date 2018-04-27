@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
 import com.scheidtbachmann.entervocheckoutplugin.core.SBCheckOut;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.AssetType;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.IdentificationType;
@@ -19,9 +20,12 @@ import com.scheidtbachmann.entervocheckoutplugin.delegation.LogLevel;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.SBCheckOutDelegate;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.SBCheckOutStatus;
 import com.scheidtbachmann.entervocheckoutplugin.dto.SBCheckOutTransaction;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+
+import static android.webkit.ConsoleMessage.MessageLevel.LOG;
 
 public class MainActivity extends AppCompatActivity implements SBCheckOutDelegate{
 
@@ -43,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements SBCheckOutDelegat
 
                 FragmentManager fm = getSupportFragmentManager();
                 FragmentTransaction tx = fm.beginTransaction();
-
                 plugin = SBCheckOut.newInstance( API_KEY);
                 tx.replace( R.id.tobeplaced, plugin, SBCheckOut.PLUGIN_FRAGEMENT_TAG);
                 tx.commit();
@@ -65,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements SBCheckOutDelegat
                 /*
                  * okay, start the checkout flow
                  */
+                Log.i( "DEMOAPP", "Using plugin version " + plugin.version());
                 plugin.start ( DEMO_TICKET, IdentificationType.BARCODE);
 
             }
