@@ -104,13 +104,14 @@ public class MainActivity extends AppCompatActivity implements SBCheckOutDelegat
 
     public void onError( String message) {
 
-        Log.i( "DEMOAPP", "ERROR MESSAGE" + message);
+        Log.i( "DEMOAPP", "ERROR MESSAGE " + message);
     }
 
     public void onStatus(SBCheckOutStatus newStatus, final SBCheckOutTransaction info) {
 
-        if ( newStatus == SBCheckOutStatus.FLOW_FINISHED) {
-            if (info != null) {
+        Log.i( "DEMOAPP", "NEW STATUS IS " + newStatus.name());
+        if ( newStatus == SBCheckOutStatus.PAYMENT_FINISHED) {
+            if (info != null && info.getSuccess()) {
                 /*
                  * for demo purposes, show a receipt-esque information
                  */
