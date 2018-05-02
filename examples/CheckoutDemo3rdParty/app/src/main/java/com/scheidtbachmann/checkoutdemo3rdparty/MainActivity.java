@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements SBCheckOutDelegat
                 "RECEIPT NO. " + data.getUnique_pay_id() + "\n" +
                         "FACILITY " + data.getFacility() + "\n" +
                         "ENTRY TIME " + formattedTime( data.getEntrytime()) + "\n" +
-                        "TRANSACTION TIME " + formattedTime(data.getTransactionTime()) + "\n" +
+                        "TRANSACTION TIME " + formattedTime(data.getTransactionTime()) + " " + data.getCurrency() +"\n" +
                         "TOTAL AMOUNT " + String.valueOf( data.getAmount()) + "\n" +
                         "INCLUDING " + String.valueOf( data.getVat_amount()) + " VAT (" + data.getVat_rate() + ")\n" +
                         "TICKET NO. " + data.getEpan();
