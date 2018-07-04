@@ -37,7 +37,7 @@ Before you can use the plugin, you will have to create an instance of it. The pl
 ```java
 SBCheckOut plugin = SBCheckOut.getInstance( "THE-API-KEY-PROVIDED-TO-YOU");
 ```
-The plugin has been implemented as an Android _Fragment_ which can be easily embedded in your app's GUI. As it is discouraged by Google to provide _Fragment_ s with non-standard constructors, a new instance is obtained using the static helper function _getInstance()_ .
+The plugin has been implemented as an Android _Fragment_ which can be easily embedded in your app's GUI. As it is discouraged by Google to provide _Fragment_ s with non-standard constructors, a new instance is obtained using the static helper function _newInstance()_ .
 
 By default, the _entervoCheckoutPlugin_ plugin comes with built-in support for _Braintree_ as the PSP (payment service provider). As a result, you will be able to offer payment via both, _PayPal_ and credit cards. As an alternative, you can use a different payment engine (to be implemented and provided by you). Please see the separate section 'Payment Services' for further details.
 
