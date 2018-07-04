@@ -337,30 +337,7 @@ Normally, the only action on your end will be to start the checkout flow using t
 
 ## Payment Services
 
-By default, the plugin uses the default payment service provider 'Braintree'. The _Braintree_ psp module offers payment via _PayPal_ and popular credit cards (the exact set of cards will vary depending on your market/region). As an alternative, you can also use your own payment processing logic and let the plugin temporarily render control to you for this purpose.
-
-### Braintree Services
-
-Using the _Braintree_ module is the default. The required _Braintree_ libraries can simply be formulated as _Gradle_ dependencies. There are however some additional steps to take beyond adding the _Braintree_ dependencies to your app's _build.gradle_ file (see below). These are described in here. You can also take a look at the demo app that comes with the _entervoCheckoutPlugin_ plugin. Okay, let's go over the required steps.
-
-First, add the required dependencies to your your app's  _build.gradle_ file:
-
-```bash
-# app/build.gradle
-
-dependencies {
-
-	// (other dependencies...)
-
-	compile 'com.braintreepayments.api:braintree:1.6.5'
-
-}
-
-```
-
-This will donwload the required additional libraries and use them in your app project. If you require more details on how the _Braintree_ modules exactly work, you can visit the corresponding project home on _GitHub_ <a href="https://github.com/braintree/braintree_android">here</a>.
-
-And this is it! Your application should now be prepared to do a complete checkout flow of a Scheidt & Bachmann parking ticket paid via _PayPal_ or credit card.
+This version of the plugin assumes that use your own payment processing logic and let the plugin temporarily render control to you for this purpose. If you'd like to use our optional support for _Braintree_ as a PSP, you'll have to use a different version of the plugin.
 
 ## Localization
 
@@ -379,6 +356,4 @@ plugin.setLanguage( "de");
 ```
 
 The above code snippet will set the plugin UI language to _German_, no matter what the settings on the device look like. If there is currently no localization available for the language specified, the plugin will revert back to the default language and raise a corresponding error notifying the host app about this.
-
-> __Note__ : the embedded _Braintree UI_ (drop-in) comes with its own set of localized resources which will also automatically kick in.
 
