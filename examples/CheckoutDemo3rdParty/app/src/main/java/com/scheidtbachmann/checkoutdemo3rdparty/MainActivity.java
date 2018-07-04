@@ -15,6 +15,7 @@ import android.view.MenuItem;
 
 import com.scheidtbachmann.entervocheckoutplugin.core.SBCheckOut;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.AssetType;
+import com.scheidtbachmann.entervocheckoutplugin.delegation.Environment;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.IdentificationType;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.LogLevel;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.SBCheckOutDelegate;
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements SBCheckOutDelegat
 
                 FragmentManager fm = getSupportFragmentManager();
                 FragmentTransaction tx = fm.beginTransaction();
-                plugin = SBCheckOut.newInstance( API_KEY);
+                plugin = SBCheckOut.newInstance( API_KEY, Environment.SANDBOX);
                 tx.replace( R.id.tobeplaced, plugin, SBCheckOut.PLUGIN_FRAGEMENT_TAG);
                 tx.commit();
                 plugin.setDelegate( MainActivity.this);
