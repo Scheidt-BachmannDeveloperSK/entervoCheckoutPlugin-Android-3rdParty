@@ -345,7 +345,7 @@ The plugin has built-in context-aware localization for an increasing number of l
 
 * German (de)
 * English (en)
-* Russion (ru)
+* Russian (ru)
 * Ukrainian (ua)
 
 If you'd like to contribute an additional language pack, contact Scheidt & Bachmann. We'll be happy to include this in future versions of the plugin.
