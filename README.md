@@ -345,6 +345,8 @@ The plugin has built-in context-aware localization for an increasing number of l
 
 * German (de)
 * English (en)
+* Russion (ru)
+* Ukrainian (ua)
 
 If you'd like to contribute an additional language pack, contact Scheidt & Bachmann. We'll be happy to include this in future versions of the plugin.
 
@@ -353,6 +355,13 @@ The plugin will query the device's locale settings (using _Locale.getDefault().g
 ```java
 // manual language override
 plugin.setLanguage( "de");
+```
+
+By default, the plugin uses the date format that fits the locale currently active on the end-users device. If you want to overrule this, you can select any valid ISO country code to be used for date formatting purposes. The corresponding plugin member functions is _setRegion()_.
+
+```java
+// region override
+plugin.setRegion( "DE");
 ```
 
 The above code snippet will set the plugin UI language to _German_, no matter what the settings on the device look like. If there is currently no localization available for the language specified, the plugin will revert back to the default language and raise a corresponding error notifying the host app about this.
