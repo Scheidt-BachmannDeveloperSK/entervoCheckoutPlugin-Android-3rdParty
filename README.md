@@ -357,7 +357,7 @@ The plugin will query the device's locale settings (using _Locale.getDefault().g
 plugin.setLanguage( "de");
 ```
 
-By default, the plugin uses the date format that fits the locale currently active on the end-users device. If you want to overrule this, you can select any valid ISO country code to be used for date formatting purposes. The corresponding plugin member functions is _setRegion()_.
+By default, the plugin uses the date format that fits the locale currently active on the end-users device. If you want to overrule this, you can select any valid ISO country code to be used for date formatting purposes. The corresponding plugin member function is _setRegion()_.
 
 ```java
 // region override
