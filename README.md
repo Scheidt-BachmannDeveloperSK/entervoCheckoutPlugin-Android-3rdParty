@@ -357,6 +357,8 @@ The plugin will query the device's locale settings (using _Locale.getDefault().g
 plugin.setLanguage( "de");
 ```
 
+The above code snippet will set the plugin UI language to _German_, no matter what the settings on the device look like. If there is currently no localization available for the language specified, the plugin will revert back to the default language and raise a corresponding error notifying the host app about this.
+
 By default, the plugin uses the date format that fits the locale currently active on the end-users device. If you want to overrule this, you can select any valid ISO country code to be used for date formatting purposes. The corresponding plugin member function is _setRegion()_.
 
 ```java
@@ -364,5 +366,4 @@ By default, the plugin uses the date format that fits the locale currently activ
 plugin.setRegion( "DE");
 ```
 
-The above code snippet will set the plugin UI language to _German_, no matter what the settings on the device look like. If there is currently no localization available for the language specified, the plugin will revert back to the default language and raise a corresponding error notifying the host app about this.
-
+The above code snippet will tell the plugin to use German date format, no matter what other settings the device might have.
