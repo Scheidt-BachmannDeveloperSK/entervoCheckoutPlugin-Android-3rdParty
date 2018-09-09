@@ -146,11 +146,11 @@ public class MainActivity extends AppCompatActivity implements SBCheckOutDelegat
 
         String receiptText =
                 "RECEIPT NO. " + data.getUnique_pay_id() + "\n" +
-                        "FACILITY " + data.getFacility() + "\n" +
+                        "FACILITY " + data.getFacility() +" (" + data.getFacility_id() + ")\n" +
                         "ENTRY TIME " + formattedTime( data.getEntrytime()) + "\n" +
                         "TRANSACTION TIME " + formattedTime(data.getTransactionTime())  +"\n" +
                         "TOTAL AMOUNT " + String.valueOf( data.getAmount()) + " " + data.getCurrency() + "\n" +
-                        "INCLUDING " + String.valueOf( data.getVat_amount()) + " VAT (" + data.getVat_rate() + ")\n" +
+                        "INCLUDING " + String.valueOf( data.getVat_amount()) + " " + data.getCurrency() + " VAT (" + data.getVat_rate() + ")\n" +
                         "TICKET NO. " + data.getEpan();
 
         new AlertDialog.Builder(MainActivity.this)
