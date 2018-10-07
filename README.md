@@ -430,3 +430,4 @@ version | description
 --- | ---
 2.3 | add support for Serbian language
 2.4 | enhanced customization options
+2.5 | minor fix (version info)
