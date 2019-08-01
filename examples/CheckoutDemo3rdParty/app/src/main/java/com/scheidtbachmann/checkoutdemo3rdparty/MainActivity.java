@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import com.scheidtbachmann.entervocheckoutplugin.core.SBCheckOut;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.AssetType;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.Environment;
+import com.scheidtbachmann.entervocheckoutplugin.delegation.ErrorCode;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.IdentificationType;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.LogLevel;
 import com.scheidtbachmann.entervocheckoutplugin.delegation.SBCheckOutDelegate;
@@ -101,6 +102,11 @@ public class MainActivity extends AppCompatActivity implements SBCheckOutDelegat
     public void onMessage(LogLevel level, String message) {
 
         Log.i( "DEMOAPP", "LOG MESSAGE " + message);
+    }
+
+    @Override
+    public void onError(ErrorCode errorCode, String s) {
+
     }
 
     public void onError( String message) {
